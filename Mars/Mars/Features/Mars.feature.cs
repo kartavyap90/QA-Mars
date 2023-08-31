@@ -147,11 +147,11 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("Click on the Join button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 13
- testRunner.And("Enter the registration details \'first\' \'last\' \'kartavyap90@gmail.com\' \'abc12345\' " +
-                        "\'abc12345\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Enter the registration details \'first\' \'last\' \'aaaa1234@gmail.com\' \'abc12345\' \'ab" +
+                        "c12345\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
- testRunner.And("Chcked the checkbox of terms and conditions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Chcked the checkbox and click submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
  testRunner.Then("User details should registered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
