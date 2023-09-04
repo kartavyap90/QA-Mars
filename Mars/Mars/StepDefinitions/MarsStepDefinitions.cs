@@ -1,22 +1,14 @@
 using Mars.Pages;
-<<<<<<< HEAD
-=======
 using NUnit.Framework;
->>>>>>> DevTemp
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using TechTalk.SpecFlow;
 
 namespace Mars.StepDefinitions
 {
     [Binding]
     public class MarsStepDefinitions
     {
-<<<<<<< HEAD
-=======
         private const string Expected = "http://localhost:5000/";
->>>>>>> DevTemp
         IWebDriver driver = new ChromeDriver();
         Login_Or_Registration_Page Login_Or_Registration_Page_Object = new Login_Or_Registration_Page();    
 
@@ -37,10 +29,6 @@ namespace Mars.StepDefinitions
         public void ThenTheRegistrationWindowShouldOpen()
         {
             Login_Or_Registration_Page_Object.Registration_Window(driver);
-<<<<<<< HEAD
-            driver.Quit();
-=======
-            //driver.Quit();
         }
 
         [Given(@"Navigate to into Mars portal")]
@@ -71,7 +59,50 @@ namespace Mars.StepDefinitions
         public void ThenUserDetailsShouldRegistered()
         {
             Assert.AreEqual(Expected, driver.Url);
->>>>>>> DevTemp
+            driver.Quit();
         }
+
+        [Given(@"Open mars portal")]
+        public void GivenOpenMarsPortal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"User can navigate and click on the Sign button")]
+        public void WhenUserCanNavigateAndClickOnTheSignButton()
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+        }
+
+        [Then(@"Login window should open")]
+        public void ThenLoginWindowShouldOpen()
+        {
+            Login_Or_Registration_Page_Object.Login_Window(driver);
+        }
+        [Given(@"Navigate to Mars portal")]
+        public void GivenNavigateToMarsPortal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"Click on Sign In button")]
+        public void WhenClickOnSignInButton()
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+        }
+
+        [When(@"Enter Email address and Password '([^']*)' '([^']*)'")]
+        public void WhenEnterEmailAddressAndPassword(string email_id, string password)
+        {
+            Login_Or_Registration_Page_Object.Enter_Login_Details(driver,  email_id,  password);
+        }
+
+        [Then(@"User should navigate to dashboard")]
+        public void ThenUserShouldNavigateToDashboard()
+        {
+            Login_Or_Registration_Page_Object.dashboard(driver);
+        }
+
+
     }
 }
