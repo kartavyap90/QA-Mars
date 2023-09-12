@@ -103,6 +103,283 @@ namespace Mars.StepDefinitions
             Login_Or_Registration_Page_Object.dashboard(driver);
         }
 
+        [Given(@"Open portal")]
+        public void GivenOpenPortal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"User click on Sign In button\.")]
+        public void WhenUserCanClickOnSignInButton_()
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+        }
+
+        [When(@"User click on Join button\.")]
+        public void WhenUserCanClickOnJoinButton_()
+        {
+            Login_Or_Registration_Page_Object.Click_Join_Button(driver);
+        }
+
+        [When(@"User enter registration details '([^']*)' '([^']*)' '([^']*)' '([^']*)' '([^']*)'")]
+        public void WhenUserEnterRegistrationDetails(string first_name, string last_name, string email_id, string password, string confirm_password)
+        {
+            Login_Or_Registration_Page_Object.Enter_Registration_Details(driver, first_name, last_name, email_id, password, confirm_password);
+        }
+
+        [Then(@"User's deatils should registered")]
+        public void ThenUsersDeatilsShouldRegistered()
+        {
+           Login_Or_Registration_Page_Object.Checked_Checkbox_And_Submit_Button(driver);
+        }
+      
+        [Given(@"Nav\. to Mars portal")]
+        public void GivenNav_ToMarsPortal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"User click on Sign In button")]
+        public void WhenUserClickOnSignInButton()
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+        }
+
+        [When(@"User click on Forget your password link text")]
+        public void WhenUserClickOnForgetYourPasswordLinkText()
+        {
+           Login_Or_Registration_Page_Object.Forget_Your_Password_LinkText(driver);
+        }
+
+        [When(@"Enter registered email id '([^']*)'")]
+        public void WhenEnterRegisteredEmailIdAndClickOnSendVerificationEmailButton(string email_id)
+        {
+            Login_Or_Registration_Page_Object.enter_email_id(driver, email_id);
+        }
+
+        [Then(@"Password reset link should sent to user")]
+        public void ThenPasswordResetLinkShouldSentToUser()
+        {
+           Login_Or_Registration_Page_Object.password_reset_link(driver);
+        }
+        [Given(@"Open MARS posrtal")]
+        public void GivenOpenMARSPosrtal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"Clcik on SIGN IN button")]
+        public void WhenClcikOnSIGNINButton()
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+        }
+
+        [When(@"Enter wrong credentials '([^']*)' '([^']*)'")]
+        public void WhenEnterWrongCredentials(string wrong_email_id, string wrong_password)
+        {
+            Login_Or_Registration_Page_Object.Enter_Wrong_Login_Details(driver, wrong_email_id, wrong_password);
+        }
+
+        [Then(@"User should not login '([^']*)'")]
+        public void ThenUserShouldNotLogin(string wrong_email_id1)
+        {
+            Login_Or_Registration_Page_Object.User_Nav_To_Send_Verification_Popup(driver, wrong_email_id1);
+        }
+
+        [Given(@"Opening Mars portal")]
+        public void GivenOpeningMarsPortal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"User login into portal '([^']*)' '([^']*)'")]
+        public void WhenUserLoginIntoPortal(string email_id, string password)
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+            Login_Or_Registration_Page_Object.Enter_Login_Details(driver,  email_id,  password);
+        }
+
+        [When(@"User click on AddNew button and enter details '([^']*)'")]
+        public void WhenUserClickOnAddNewButtonAndEnterDetails(string language)
+        {
+            Login_Or_Registration_Page_Object.Add_Language(driver, language);
+        }
+
+        [Then(@"User's detail shoul registered '([^']*)'")]
+        public void ThenUsersDetailShoulRegistered(string lang)
+        {
+            Login_Or_Registration_Page_Object.Language_Added(driver, lang);
+        }
+        [Given(@"Opening to Mars portal")]
+        public void GivenOpeningToMarsPortal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"Login into Portal '([^']*)' '([^']*)'")]
+        public void WhenLoginIntoPortal(string p0, string p1)
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+            Login_Or_Registration_Page_Object.Enter_Login_Details(driver, p0, p1);
+;        }
+
+        [When(@"User click on AddNew button withoust entering details")]
+        public void WhenUserClickOnAddNewButtonWithoustEnteringDetails()
+        {
+            Login_Or_Registration_Page_Object.Add_Language_without_Data(driver);
+        }
+
+        [Then(@"User received error message")]
+        public void ThenUserReceivedErrorMessage()
+        {
+           Login_Or_Registration_Page_Object.Error_Message_For_Language_Add(driver);
+        }
+
+        [Given(@"open portal mars")]
+        public void GivenOpenPortalMars()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"Login to Portal '([^']*)' '([^']*)'")]
+        public void WhenLoginToPortal(string email, string password)
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+            Login_Or_Registration_Page_Object.Enter_Login_Details(driver, email, password);
+        }
+
+        [When(@"Edit the language and level '([^']*)'")]
+        public void WhenEditTheLanguageAndLevel(string new_lang)
+        {
+            Login_Or_Registration_Page_Object.Edit_Language_And_Level(driver, new_lang);
+        }
+
+        [Then(@"User should successfully edited language and level")]
+        public void ThenUserShouldSuccessfullyEditedLanguageAndLevel()
+        {
+            Login_Or_Registration_Page_Object.Edited_Language_And_Level(driver);
+        }
+        [Given(@"User open mars portal")]
+        public void GivenUserOpenMarsPortal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"User Login to portal '([^']*)' '([^']*)'")]
+        public void WhenUserLoginToPortal(string email_id, string password)
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+            Login_Or_Registration_Page_Object.Enter_Login_Details(driver, email_id, password);
+        }
+
+        [When(@"User click on delete button to delete language entry")]
+        public void WhenUserClickOnDeleteButtonToDeleteLanguageEntry()
+        {
+            Login_Or_Registration_Page_Object.Delete_Language_And_Level(driver);
+        }
+
+        [Then(@"User should successfully deleted the language")]
+        public void ThenUserShouldSuccessfullyDeletedTheLanguage()
+        {
+            Login_Or_Registration_Page_Object.Deleted_Language_And_Level(driver);
+        }
+        [Given(@"User Opening Mars portal")]
+        public void GivenUserOpeningMarsPortal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"User Login to mars portal '([^']*)' '([^']*)'")]
+        public void WhenUserLoginToMarsPortal(string p0, string p1)
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+            Login_Or_Registration_Page_Object.Enter_Login_Details(driver, p0, p1);
+        }
+
+        [When(@"User Click on AddNew button and enter skill '([^']*)'")]
+        public void WhenUserClickOnAddNewButtonAndEnterSkill(string p0)
+        {
+            Login_Or_Registration_Page_Object.Add_Skill(driver, p0);
+        }
+
+        [Then(@"User details should registered '([^']*)'")]
+        public void ThenUserDetailsShouldRegistered(string p0)
+        {
+            Login_Or_Registration_Page_Object.Skill_Added(driver, p0);
+        }
+        [Given(@"Opening to portal Mars")]
+        public void GivenOpeningToPortalMars()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"Login to Mars Portal '([^']*)' '([^']*)'")]
+        public void WhenLoginToMarsPortal(string p0, string p1)
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+            Login_Or_Registration_Page_Object.Enter_Login_Details(driver, p0, p1);
+        }
+
+        [When(@"User click on AddNew button without entering skill details")]
+        public void WhenUserClickOnAddNewButtonWithoutEnteringSkillDetails()
+        {
+            Login_Or_Registration_Page_Object.Add_Skill_without_Data(driver);
+        }
+
+        [Then(@"User received error message for it")]
+        public void ThenUserReceivedErrorMessageForIt()
+        {
+            Login_Or_Registration_Page_Object.Error_Message_For_Add_Skill_without_Data(driver);
+        }
+        [Given(@"open to portal mars")]
+        public void GivenOpenToPortalMars()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"Login to Portal Mars '([^']*)' '([^']*)'")]
+        public void WhenLoginToPortalMars(string p0, string p1)
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+            Login_Or_Registration_Page_Object.Enter_Login_Details(driver, p0, p1);
+        }
+
+        [When(@"Edit the skill and level '([^']*)'")]
+        public void WhenEditTheSkillAndLevel(string p0)
+        {
+            Login_Or_Registration_Page_Object.Edit_Skill_And_Level(driver, p0);
+        }
+
+        [Then(@"User should successfully edited skill and level")]
+        public void ThenUserShouldSuccessfullyEditedSkillAndLevel()
+        {
+            Login_Or_Registration_Page_Object.Edited_Skill_And_Level(driver);
+        }
+        [Given(@"User open to mars portal")]
+        public void GivenUserOpenToMarsPortal()
+        {
+            Login_Or_Registration_Page_Object.Navigate_To_URL(driver);
+        }
+
+        [When(@"User Login to portal mars '([^']*)' '([^']*)'")]
+        public void WhenUserLoginToPortalMars(string p0, string p1)
+        {
+            Login_Or_Registration_Page_Object.Click_Sign_In_Button(driver);
+            Login_Or_Registration_Page_Object.Enter_Login_Details(driver, p0, p1);
+        }
+
+        [When(@"User click on delete button to delete skill entry")]
+        public void WhenUserClickOnDeleteButtonToDeleteSkillEntry()
+        {
+            Login_Or_Registration_Page_Object.Delete_Skill_And_Level(driver);
+        }
+
+        [Then(@"User should successfully deleted the skill")]
+        public void ThenUserShouldSuccessfullyDeletedTheSkill()
+        {
+            Login_Or_Registration_Page_Object.Deleted_Skill_And_Level(driver);
+        }
+
 
     }
 }
