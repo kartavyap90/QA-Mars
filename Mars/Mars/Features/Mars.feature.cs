@@ -74,13 +74,13 @@ namespace Mars.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Existing User can delete the Skills and Level.")]
-        public virtual void ExistingUserCanDeleteTheSkillsAndLevel_()
+        [NUnit.Framework.DescriptionAttribute("Check that Existing User can change the hours earn target value.")]
+        public virtual void CheckThatExistingUserCanChangeTheHoursEarnTargetValue_()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Existing User can delete the Skills and Level.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 90
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check that Existing User can change the hours earn target value.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 168
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -100,17 +100,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 91
- testRunner.Given("User Nav. to mars portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 169
+ testRunner.Given("User to Launch the mars portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 92
- testRunner.When("User Login to Portal with this credentials \'kartavyap90@gmail.com\' \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 170
+ testRunner.When("Login to Martian Portal as a User \'kartavyap90@gmail.com\' \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 93
- testRunner.And("User click on delete icon to delete skill entry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 171
+ testRunner.And("User click on the edit icon and change the value of the earn target", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 94
- testRunner.Then("User should successfully deleted the skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 172
+ testRunner.Then("User should successfully change the value of the earn target", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
