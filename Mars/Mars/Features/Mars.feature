@@ -287,3 +287,4 @@
 #	Then User should successfully delete certification details 
 #
 # Scenario:
+# Scenario:
