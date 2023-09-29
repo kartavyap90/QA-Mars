@@ -285,3 +285,5 @@
 #	When Login QA Mars Portal 'kartavyap90@gmail.com' 'abc123'
 #	And User delete certification details by clicking on the cross icon 
 #	Then User should successfully delete certification details 
+#
+# Scenario:
