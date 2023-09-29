@@ -65,8 +65,7 @@ namespace Mars.StepDefinitions
         [Then(@"User details should registered")]
         public void ThenUserDetailsShouldRegistered()
         {
-            Assert.AreEqual(Expected, driver.Url);
-            driver.Quit();
+            Login_Or_Registration_Page_Object.Users_Details_Registered(driver);
         }
 
         [Given(@"Open mars portal")]
@@ -138,6 +137,7 @@ namespace Mars.StepDefinitions
         public void ThenUsersDeatilsShouldRegistered()
         {
            Login_Or_Registration_Page_Object.Checked_Checkbox_And_Submit_Button(driver);
+           Login_Or_Registration_Page_Object.Users_Details_Registered(driver);
         }
       
         [Given(@"Nav\. to Mars portal")]

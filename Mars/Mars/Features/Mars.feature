@@ -1,16 +1,17 @@
 ﻿Feature: This test suite contains test sceanrio for Mars project.
 
 
-
+# Registration and Login scenario
 #Scenario: New User can able to click on Join button.
 #	Given Log into Mars portal
 #	When New User can navigate and click on the Join button
 #	Then The registration window should open
-
+#
+#For below scenario each time change the email address
 #Scenario: aNew User can able to enter the required details in registration page.
 #	Given Navigate to into Mars portal
 #	When Click on the Join button
-#	And Enter the registration details 'first' 'last' 'abc123@gmail.com' 'abc12345' 'abc12345'
+#	And Enter the registration details 'first' 'last' 'abc123444444@gmail.com' 'abc12345' 'abc12345'
 #	And Chcked the checkbox and click submit button
 #	Then User details should registered
 
@@ -24,27 +25,31 @@
 #	When Click on Sign In button
 #	And Enter Email address and Password 'kartavyap90@gmail.com' 'abc123'
 #	Then User should navigate to dashboard
-
+#
+#For below scenario each time change the email address
 #Scenario: Existing User can able to click on Join button and register details from the login box.
 #	Given Open portal
 #	When User click on Sign In button.
 #	And User click on Join button.
-#	And User enter registration details 'first name' 'last name' 'a1@a.com' 'abc12345' 'abc12345'
+#	And User enter registration details 'first name' 'last name' 'a111111111111@a.com' 'abc12345' 'abc12345'
 #	Then User's deatils should registered
-
+###
+###For below scenario try to use email id as above scenario
 #Scenario: Existing User can able to send out verification mail for Forget Password.
 #	Given Nav. to Mars portal
 #	When User click on Sign In button
 #	And User click on Forget your password link text
-#	And Enter registered email id 'aaaa123456789111111@gmail.com'
+#	And Enter registered email id 'a111111111111@a.com'
 #	Then Password reset link should sent to user
-
+#
 #Scenario: Registered User can not login with wrong credentials.
 #	Given Open MARS posrtal 
 #	When Clcik on SIGN IN button
 #	And Enter wrong credentials 'kartavyap9@gmail.com' 'abc124'
 #	Then User should not login 'kartavyap9@gmail.com'
 
+
+# Languages Tab scenario
 #Scenario: bExisiting User can add the Languges and Level from the language section in Profile page.
 #	Given Opening Mars portal
 #	When User login into portal 'kartavyap90@gmail.com' 'abc123'
@@ -61,7 +66,7 @@
 #	Given open portal mars
 #	When Login to Portal 'kartavyap90@gmail.com' 'abc123'
 #	And Edit the language and level 'edited language'
-#	Then User should successfully edited language and level
+#	Then User should successfully edited language and level 
 #
 #Scenario: Existing User can delete the Language and Level.
 #	Given User open mars portal
@@ -69,6 +74,8 @@
 #	And User click on delete button to delete language entry
 #	Then User should successfully deleted the language
 
+
+# Skills Tab scenario
 #Scenario: Exisiting User can add the Skills and Level from the skills section.
 #	Given User Opening Mars portal
 #	When User Login to mars portal 'kartavyap90@gmail.com' 'abc123'
@@ -93,6 +100,8 @@
 #	And User click on delete button to delete skill entry
 #	Then User should successfully deleted the skill
 
+
+# User Profile scenarios
 #Scenario: Exisiting User can click on the dropdown button to edit the First name and last name.
 #	Given Launch portal
 #	When User login to portal with details 'kartavyap90@gmail.com' 'abc123'
@@ -171,6 +180,7 @@
 #	And User click on the edit icon and change the value of the earn target
 #	Then User should successfully change the value of the earn target
 
+#Description scenario
 #Scenario: Existing User can click on the pencil icon of the description
 #	Given Launch the mars portal
 #	When Entering the Mars Portal 'kartavyap90@gmail.com' 'abc123'
@@ -189,6 +199,7 @@
 #	And User enter description in box
 #	Then User should successfully enter description in box
 
+# Education tab scenario
 #Scenario: Existing User can click on the Education tab.
 #	Given Launch the portal
 #	When User SignIn for the Mars Portal 'kartavyap90@gmail.com' 'abc123'
@@ -231,6 +242,8 @@
 #	And User delete education details by clicking on the cross icon 
 #	Then User should successfully delete education details 
 
+
+# Certification tab scenario
 #Scenario: Existing User can click on the Certification tab.
 #	Given Launch Portal qa mars 
 #	When User SignIn the Mars Portal 'kartavyap90@gmail.com' 'abc123'

@@ -11,8 +11,8 @@ namespace Mars.Pages
     {
         public void Click_Certification_Tab(IWebDriver driver)
         {
-            IWebElement click_education_tab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
-            click_education_tab.Click();
+            IWebElement click_certification_tab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[4]"));
+            click_certification_tab.Click();
             Thread.Sleep(1000);
         }
         public void Clicked_Certification_Tab(IWebDriver driver)
