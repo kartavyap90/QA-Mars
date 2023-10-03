@@ -11,17 +11,23 @@ namespace Mars.Pages
     {
         public void Add_Language(IWebDriver driver, string language)
         {
-            IWebElement add_new_button = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/thead/tr/th[3]/div"));
+            Thread.Sleep(1000);
+            IWebElement add_new_button = driver.FindElement(By.XPath("//div[@class='ui teal button ']"));//relative xpath
             add_new_button.Click();
+            Thread.Sleep(1000);
             IWebElement language_textbox = driver.FindElement(By.Name("name"));
             language_textbox.Click();
+            Thread.Sleep(1000);
             language_textbox.SendKeys(language);
             IWebElement drop_down = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select"));
             drop_down.Click();
+            Thread.Sleep(1000);
             IWebElement level_selection = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[2]/select/option[3]"));
             level_selection.Click();
+            Thread.Sleep(1000);
             IWebElement add_buuton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/div/div[3]/input[1]"));
             add_buuton.Click();
+            Thread.Sleep(1000);
         }
         public void Language_Added(IWebDriver driver, string lang)
         {
@@ -83,6 +89,7 @@ namespace Mars.Pages
         {
             IWebElement delete_icon = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[3]/span[2]"));
             delete_icon.Click();
+            Thread.Sleep(2000);
         }
         public void Deleted_Language_And_Level(IWebDriver driver)
         {

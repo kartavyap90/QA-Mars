@@ -33,8 +33,8 @@
 #	And User click on Join button.
 #	And User enter registration details 'first name' 'last name' 'a111111111111@a.com' 'abc12345' 'abc12345'
 #	Then User's deatils should registered
-###
-###For below scenario try to use email id as above scenario
+#
+#For below scenario try to use email id as above scenario
 #Scenario: Existing User can able to send out verification mail for Forget Password.
 #	Given Nav. to Mars portal
 #	When User click on Sign In button
@@ -54,7 +54,7 @@
 #	Given Opening Mars portal
 #	When User login into portal 'kartavyap90@gmail.com' 'abc123'
 #	And User click on AddNew button and enter details 'language3'
-#	Then User's detail shoul registered 'language3'
+#	Then User's detail should registered 'language3'
 #
 #Scenario: Exisiting User can not add the Languges and Level without entering each of them from the language section in Profile page.
 #	Given Opening to Mars portal
@@ -68,6 +68,7 @@
 #	And Edit the language and level 'edited language'
 #	Then User should successfully edited language and level 
 #
+#For below scenario first check that you have language added
 #Scenario: Existing User can delete the Language and Level.
 #	Given User open mars portal
 #	When User Login to portal 'kartavyap90@gmail.com' 'abc123'

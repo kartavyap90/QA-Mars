@@ -212,8 +212,8 @@ namespace Mars.StepDefinitions
             Language_Tab_Object.Add_Language(driver, language);
         }
 
-        [Then(@"User's detail shoul registered '([^']*)'")]
-        public void ThenUsersDetailShoulRegistered(string lang)
+        [Then(@"User's detail should registered '([^']*)'")]
+        public void ThenUsersDetailShouldRegistered(string lang)
         {
             Language_Tab_Object.Language_Added(driver, lang);
         }

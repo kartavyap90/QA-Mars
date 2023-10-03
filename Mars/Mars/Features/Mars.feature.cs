@@ -74,15 +74,15 @@ namespace Mars.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Existing User can able to click on Join button and register details from the logi" +
-            "n box.")]
-        public virtual void ExistingUserCanAbleToClickOnJoinButtonAndRegisterDetailsFromTheLoginBox_()
+        [NUnit.Framework.DescriptionAttribute("bExisiting User can add the Languges and Level from the language section in Profi" +
+            "le page.")]
+        public virtual void BExisitingUserCanAddTheLangugesAndLevelFromTheLanguageSectionInProfilePage_()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Existing User can able to click on Join button and register details from the logi" +
-                    "n box.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 30
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("bExisiting User can add the Languges and Level from the language section in Profi" +
+                    "le page.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -102,34 +102,30 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 31
- testRunner.Given("Open portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 54
+ testRunner.Given("Opening Mars portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 32
- testRunner.When("User click on Sign In button.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 55
+ testRunner.When("User login into portal \'kartavyap90@gmail.com\' \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 33
- testRunner.And("User click on Join button.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 56
+ testRunner.And("User click on AddNew button and enter details \'language3\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 34
- testRunner.And("User enter registration details \'first name\' \'last name\' \'a111111111111@a.com\' \'a" +
-                        "bc12345\' \'abc12345\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 35
- testRunner.Then("User\'s deatils should registered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 57
+ testRunner.Then("User\'s detail should registered \'language3\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Existing User can able to send out verification mail for Forget Password.")]
-        public virtual void ExistingUserCanAbleToSendOutVerificationMailForForgetPassword_()
+        [NUnit.Framework.DescriptionAttribute("Existing User can delete the Language and Level.")]
+        public virtual void ExistingUserCanDeleteTheLanguageAndLevel_()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Existing User can able to send out verification mail for Forget Password.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 38
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Existing User can delete the Language and Level.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 71
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -149,20 +145,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 39
- testRunner.Given("Nav. to Mars portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 72
+ testRunner.Given("User open mars portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 40
- testRunner.When("User click on Sign In button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 73
+ testRunner.When("User Login to portal \'kartavyap90@gmail.com\' \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 41
- testRunner.And("User click on Forget your password link text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 74
+ testRunner.And("User click on delete button to delete language entry", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 42
- testRunner.And("Enter registered email id \'a111111111111@a.com\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 43
- testRunner.Then("Password reset link should sent to user", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 75
+ testRunner.Then("User should successfully deleted the language", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
