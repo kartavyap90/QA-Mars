@@ -13,6 +13,7 @@ namespace Mars.Pages
         {
             IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
             edit_dropdown.Click();
+            Thread.Sleep(1000);
         }
         public void Clicked_Edit_Dropdown(IWebDriver driver)
         {
@@ -24,12 +25,15 @@ namespace Mars.Pages
         {
             IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
             edit_dropdown.Click();
+            Thread.Sleep(1000);
             IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
             first_name_textbox.Click();
+            Thread.Sleep(1000);
             first_name_textbox.Clear();
             first_name_textbox.SendKeys(first_name);
             IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
             last_name_textbox.Click();
+            Thread.Sleep(1000);
             last_name_textbox.Clear();
             last_name_textbox.SendKeys(last_name);
             IWebElement save_button = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div[2]/button"));
@@ -60,31 +64,33 @@ namespace Mars.Pages
         }
         public void First_And_Last_Name_As_Blank(IWebDriver driver)
         {
-            IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
-            edit_dropdown.Click();
-            IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
-            IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
-            first_name_textbox.Clear();
-            last_name_textbox.Clear();
-            //first_name_textbox.SendKeys("");
-            //last_name_textbox.SendKeys("");
-            Thread.Sleep(3000);
-            IWebElement save_button = driver.FindElement(By.XPath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div[2]/button"));
-            Thread.Sleep(3000);
-            save_button.Click();
-
+                Thread.Sleep(1000);
+                IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
+                edit_dropdown.Click();
+                Thread.Sleep(1000);
+                IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
+                IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
+                first_name_textbox.Click();
+                first_name_textbox.Clear();
+                Thread.Sleep(500);
+                last_name_textbox.Click() ;
+                last_name_textbox.Clear();
+                Thread.Sleep(500);
+                IWebElement save_button = driver.FindElement(By.XPath("//button[contains(text(),'Save')]"));
+                save_button.Click();
+                Thread.Sleep(1000);
         }
         public void Error_Message_First_And_Last_Name_As_Blank(IWebDriver driver)
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(1000);
             IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
             edit_dropdown.Click();
             Thread.Sleep(1000);
             IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
             IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
             string f = first_name_textbox.GetAttribute("value");
-            string l = first_name_textbox.GetAttribute("value");
-            if (f == "" && l == "")
+            string l = last_name_textbox.GetAttribute("value");
+            if (string.IsNullOrWhiteSpace(f) && string.IsNullOrWhiteSpace(l))
             {
                 Console.WriteLine("\n First and last name are blank, User need to enter first and last name.");
             }
@@ -98,14 +104,17 @@ namespace Mars.Pages
         {
             IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
             edit_dropdown.Click();
+            Thread.Sleep(1000);
             IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
             first_name_textbox.Click();
             first_name_textbox.Clear();
             first_name_textbox.SendKeys(first);
+            Thread.Sleep(1000);
             IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
             last_name_textbox.Click();
             last_name_textbox.Clear();
             last_name_textbox.SendKeys(last);
+            Thread.Sleep(1000);
             IWebElement save_button = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div[2]/button"));
             save_button.Click();
             Thread.Sleep(1000);
@@ -131,6 +140,7 @@ namespace Mars.Pages
             {
                 Console.WriteLine("\n First and last name has value");
             }
+            Thread.Sleep(1000);
             driver.Close();
         }
         public void Click_Edit_Icon_Of_Availability(IWebDriver driver)
@@ -148,7 +158,7 @@ namespace Mars.Pages
         {
             IWebElement cross_icon_availability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i"));
             cross_icon_availability.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(1000);
         }
         public void Clicked_Cross_Icon_Of_Availability(IWebDriver driver)
         {
@@ -162,8 +172,10 @@ namespace Mars.Pages
             Thread.Sleep(1000);
             IWebElement availability_dropdown = driver.FindElement(By.Name("availabiltyType"));
             availability_dropdown.Click();
+            Thread.Sleep(1000);
             IWebElement select_availability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/select/option[3]"));
             select_availability.Click();
+            Thread.Sleep(1000);
         }
         public void Changed_Value_Of_Availability(IWebDriver driver)
         {
@@ -200,6 +212,7 @@ namespace Mars.Pages
             Thread.Sleep(1000);
             IWebElement hours_dropdown = driver.FindElement(By.Name("availabiltyHour"));
             hours_dropdown.Click();
+            Thread.Sleep(1000);
             IWebElement select_hours = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/select/option[4]"));
             select_hours.Click();
             Thread.Sleep(1000);
@@ -239,6 +252,7 @@ namespace Mars.Pages
             Thread.Sleep(1000);
             IWebElement earn_target_dropdown = driver.FindElement(By.Name("availabiltyTarget"));
             earn_target_dropdown.Click();
+            Thread.Sleep(500);
             IWebElement select_earn_target = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/select/option[4]"));
             select_earn_target.Click();
             Thread.Sleep(1000);

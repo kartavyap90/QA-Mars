@@ -97,23 +97,33 @@ namespace Mars.Pages
             Console.WriteLine("\n Education Details successfully entered by the user.");
             driver.Close();
         }
-        public void Edited_Education_Details(IWebDriver driver, string college_university_name, string degree_name)
+        public void Edit_Education_Details(IWebDriver driver, string college_university_name, string degree_name)
         {
-            IWebElement college_university_textbox = driver.FindElement(By.Name("instituteName"));
+            Thread.Sleep(1000);
+            IWebElement edit_icon_education = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[6]/span[1]/i"));
+            edit_icon_education.Click();
+            Thread.Sleep(1000);
+
+
+
+
+            IWebElement college_university_textbox = driver.FindElement(By.XPath("//input[@name='instituteName']"));
             college_university_textbox.Click();
             college_university_textbox.Clear();
             college_university_textbox.SendKeys(college_university_name);
             Thread.Sleep(1000);
 
-            IWebElement country_college_university_dropdown = driver.FindElement(By.Name("country"));
+            IWebElement country_college_university_dropdown = driver.FindElement(By.XPath("//select[@name='country']"));
             country_college_university_dropdown.Click();
-            IWebElement select_country_college_university_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[1]/div[2]/select/option[11]"));
+            Thread.Sleep(1000);
+            IWebElement select_country_college_university_dropdown = driver.FindElement(By.XPath("//option[contains(text(),'Australia')]"));
             select_country_college_university_dropdown.Click();
             Thread.Sleep(1000);
 
-            IWebElement title_dropdown = driver.FindElement(By.Name("title"));
+            IWebElement title_dropdown = driver.FindElement(By.XPath("//select[@name='title']"));
             title_dropdown.Click();
-            IWebElement select_title_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[2]/div[1]/select/option[12]"));
+            Thread.Sleep(1000);
+            IWebElement select_title_dropdown = driver.FindElement(By.XPath("//option[contains(text(),'BFA')]"));
             select_title_dropdown.Click();
             Thread.Sleep(1000);
 
@@ -125,13 +135,13 @@ namespace Mars.Pages
 
             IWebElement graduation_dropdown = driver.FindElement(By.Name("yearOfGraduation"));
             graduation_dropdown.Click();
-            IWebElement select_graduation_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[2]/div[3]/select/option[3]"));
+            IWebElement select_graduation_dropdown = driver.FindElement(By.XPath("//option[contains(text(),'2020')]"));
             select_graduation_dropdown.Click();
             Thread.Sleep(1000);
 
-            IWebElement add_button = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[3]/div/input[1]"));
+            IWebElement add_button = driver.FindElement(By.XPath("//input[@value='Update']")); //relative xpath
             add_button.Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
         }
         public void Edited_Education_Details(IWebDriver driver)
         {

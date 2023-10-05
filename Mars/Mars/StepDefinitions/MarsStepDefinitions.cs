@@ -918,12 +918,12 @@ namespace Mars.StepDefinitions
             Login_Or_Registration_Page_Object.Enter_Login_Details(driver, p0, p1);
         }
 
-        [When(@"User edited education details and click add button '([^']*)' '([^']*)'")]
-        public void WhenUserEditedEducationDetailsAndClickAddButton(string college_university_name, string degree_name)
+
+        [When(@"User edit education details and click add button '([^']*)' '([^']*)'")]
+        public void WhenUserEditEducationDetailsAndClickAddButton(string college_university_name, string degree_name)
         {
             Education_Tab_Page_Object.Click_Education_Tab(driver);
-            Education_Tab_Page_Object.Click_Add_New_Button_Education(driver);
-            Education_Tab_Page_Object.Edited_Education_Details(driver, college_university_name, degree_name);
+            Education_Tab_Page_Object.Edit_Education_Details(driver, college_university_name, degree_name);
         }
 
         [Then(@"User should successfully edited education details")]
@@ -1097,8 +1097,8 @@ namespace Mars.StepDefinitions
             Login_Or_Registration_Page_Object.Enter_Login_Details(driver, p0, p1);
         }
 
-        [When(@"User edited certification details and click add button '([^']*)' '([^']*)'")]
-        public void WhenUserEditedCertificationDetailsAndClickAddButton(string p0, string p1)
+        [When(@"User edit certification details and click add button '([^']*)' '([^']*)'")]
+        public void WhenUserEditCertificationDetailsAndClickAddButton(string p0, string p1)
         {
             Certification_Tab_Page_Object.Click_Certification_Tab(driver);
             Certification_Tab_Page_Object.Edit_Certification_Details(driver, p0, p1);

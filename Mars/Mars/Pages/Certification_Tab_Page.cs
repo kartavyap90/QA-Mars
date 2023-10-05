@@ -103,13 +103,13 @@ namespace Mars.Pages
 
             IWebElement certificate_year_dropdown = driver.FindElement(By.Name("certificationYear"));
             certificate_year_dropdown.Click();
-            IWebElement select_certificate_year = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[3]/tr/td/div/div/div[3]/select/option[6]"));
+            IWebElement select_certificate_year = driver.FindElement(By.XPath("//option[contains(text(),'2021')]")); //relative xpath with text function
             select_certificate_year.Click();
-            Thread.Sleep(2000);
-
-            IWebElement update_button_certification = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[5]/div[1]/div[2]/div/table/tbody[3]/tr/td/div/span/input[1]"));
-            update_button_certification.Click();
             Thread.Sleep(1000);
+
+            IWebElement update_button_certification = driver.FindElement(By.XPath("//input[@value='Update']")); //relative xpath
+            Thread.Sleep(1000); 
+            update_button_certification.Click();
         }
         public void Edited_Certification_Details(IWebDriver driver)
         {

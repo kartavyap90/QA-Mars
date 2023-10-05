@@ -150,7 +150,7 @@
 #	When Logging into the Mars portal as a user 'kartavyap90@gmail.com' 'abc123'
 #	And User click on the edit icon of the hours
 #	Then User should successfully click on the edit icon of the hours
-#
+
 #Scenario:	Existing User can click on the cross icon of the hours.
 #	Given User navig. to mars portal
 #	When User Accessing the Mars Portal 'kartavyap90@gmail.com' 'abc123'
@@ -175,7 +175,7 @@
 #	And User click on the cross icon of the earn target
 #	Then User should successfully click on the cross icon of earn target
 #
-#Scenario: Check that Existing User can change the hours earn target value.
+#Scenario: Existing User can change the hours earn target value.
 #	Given User to Launch the mars portal
 #	When Login to Martian Portal as a User 'kartavyap90@gmail.com' 'abc123'
 #	And User click on the edit icon and change the value of the earn target
@@ -195,7 +195,7 @@
 #	Then User should receive error while entering description without first character of digit or letter
 #
 #Scenario: Existing User can enter the description.
-#	Given Launch mars portal
+#	Given Launch to the portal mars
 #	When User Sign-In for the Mars Portal 'kartavyap90@gmail.com' 'abc123'
 #	And User enter description in box
 #	Then User should successfully enter description in box
@@ -213,7 +213,7 @@
 #	And User click on the Add New button from the Education tab
 #	Then User should successfully click on the Add New button from the Education tab
 #
-#Scenario: Existing User can not add the educations and other details without without entering each of them from the Education tab.
+#Scenario: Existing User can not add the education and other details without entering each of them from the Education tab.
 #	Given Launch QA Mars Portal
 #	When User Login the Mars Portal 'kartavyap90@gmail.com' 'abc123'
 #	And User not add the educations and other details and click Add button
@@ -234,7 +234,7 @@
 #Scenario: Existing User can edit the educations and other details from the Education tab.
 #	Given Launch QA Mars 
 #	When Login into Mars Portal 'kartavyap90@gmail.com' 'abc123'
-#	And User edited education details and click add button 'Saint University' 'MBBS' 
+#	And User edit education details and click add button 'Saint University' 'MBBS' 
 #	Then User should successfully edited education details 
 #
 #Scenario: Existing User can delete the educations and other details from the Education tab.
@@ -257,7 +257,7 @@
 #	And User click on the Add New button from the Certification tab
 #	Then User should successfully click on the Add New button from the Certification tab
 #
-#Scenario: Existing User can not add the certification and other details without without entering each of them from the Certification tab.
+#Scenario: Existing User can not add the certification and other details without entering each of them from the Certification tab.
 #	Given Launch QA Mars URL
 #	When User Login into the Mars Portal website 'kartavyap90@gmail.com' 'abc123'
 #	And User not add the certification and other details and click Add button
@@ -278,7 +278,7 @@
 #Scenario: Existing User can edit the certification and other details from the Certification tab.
 #	Given Launch QA Mars website
 #	When Login into Mars Portal website 'kartavyap90@gmail.com' 'abc123'
-#	And User edited certification details and click add button 'Certificate 2' 'Industry Connect' 
+#	And User edit certification details and click add button 'Certificate 2' 'Industry Connect' 
 #	Then User should successfully edited certification details 
 #
 #Scenario: Existing User can delete the certification and other details from the Certification tab.
@@ -286,6 +286,4 @@
 #	When Login QA Mars Portal 'kartavyap90@gmail.com' 'abc123'
 #	And User delete certification details by clicking on the cross icon 
 #	Then User should successfully delete certification details 
-#
-# Scenario:
-# Scenario:
+

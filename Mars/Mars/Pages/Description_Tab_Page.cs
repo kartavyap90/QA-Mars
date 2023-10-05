@@ -26,7 +26,7 @@ namespace Mars.Pages
             IWebElement description_value = driver.FindElement(By.Name("value"));
             description_value.Click();
             description_value.Clear();
-            description_value.SendKeys(" This is a sample description.");
+            description_value.SendKeys(" Entering description with first character as white space..");
             Thread.Sleep(1000);
             IWebElement save_button_description = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button"));
             save_button_description.Click();
@@ -42,9 +42,12 @@ namespace Mars.Pages
             IWebElement description_value = driver.FindElement(By.Name("value"));
             description_value.Click();
             description_value.Clear();
+            Thread.Sleep(1000);
             description_value.SendKeys("This is a sample description.");
+            Thread.Sleep(1000);
             IWebElement save_button_description = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button"));
             save_button_description.Click();
+            Thread.Sleep(1000);
         }
         public void Entered_Description(IWebDriver driver)
         {
