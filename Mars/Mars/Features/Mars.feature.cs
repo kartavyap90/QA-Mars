@@ -74,15 +74,13 @@ namespace Mars.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Existing User can delete the certification and other details from the Certificati" +
-            "on tab.")]
-        public virtual void ExistingUserCanDeleteTheCertificationAndOtherDetailsFromTheCertificationTab_()
+        [NUnit.Framework.DescriptionAttribute("Existing User can able to click on Sign In button.")]
+        public virtual void ExistingUserCanAbleToClickOnSignInButton_()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Existing User can delete the certification and other details from the Certificati" +
-                    "on tab.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 284
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Existing User can able to click on Sign In button.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 18
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -102,17 +100,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 285
- testRunner.Given("Launch website Mars", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 19
+ testRunner.Given("Open mars portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 286
- testRunner.When("Login QA Mars Portal \'kartavyap90@gmail.com\' \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 20
+ testRunner.When("User can navigate and click on the Sign button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 287
- testRunner.And("User delete certification details by clicking on the cross icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 288
- testRunner.Then("User should successfully delete certification details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 21
+ testRunner.Then("Login window should open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

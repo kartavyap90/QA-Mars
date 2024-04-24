@@ -7,259 +7,259 @@ using System.Threading.Tasks;
 
 namespace Mars.Pages
 {
-    public class Profile_Panel_Dashboard_Page
+    public class ProfilePanelDashboardPage
     {
-        public void Click_Edit_Dropdown(IWebDriver driver)
+        public void ClickEditDropdown(IWebDriver driver)
         {
-            IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
-            edit_dropdown.Click();
+            IWebElement EditDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
+            EditDropdown.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Edit_Dropdown(IWebDriver driver)
+        public void ClickedEditDropdown(IWebDriver driver)
         {
-            Console.WriteLine("\n User clicked Edit dropdown successfully.");
+            Console.WriteLine("\n User clicked Edit Dropdown successfully.");
             Thread.Sleep(1000);
             driver.Close();
         }
-        public void Edit_First_And_Last_Name(IWebDriver driver, string first_name, string last_name)
+        public void EditFirstAndLastName(IWebDriver driver, string FirstName, string LastName)
         {
-            IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
-            edit_dropdown.Click();
+            IWebElement EditDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
+            EditDropdown.Click();
             Thread.Sleep(1000);
-            IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
-            first_name_textbox.Click();
+            IWebElement FirstNameTextbox = driver.FindElement(By.Name("FirstName"));
+            FirstNameTextbox.Click();
             Thread.Sleep(1000);
-            first_name_textbox.Clear();
-            first_name_textbox.SendKeys(first_name);
-            IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
-            last_name_textbox.Click();
+            FirstNameTextbox.Clear();
+            FirstNameTextbox.SendKeys(FirstName);
+            IWebElement LastNameTextbox = driver.FindElement(By.Name("LastName"));
+            LastNameTextbox.Click();
             Thread.Sleep(1000);
-            last_name_textbox.Clear();
-            last_name_textbox.SendKeys(last_name);
-            IWebElement save_button = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div[2]/button"));
-            save_button.Click();
+            LastNameTextbox.Clear();
+            LastNameTextbox.SendKeys(LastName);
+            IWebElement SaveButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div[2]/button"));
+            SaveButton.Click();
             Thread.Sleep(1000);
         }
-        public void Edited_First_And_Last_Name(IWebDriver driver, string first_name, string last_name)
+        public void EditedFirstAndLastName(IWebDriver driver, string FirstName, string LastName)
         {
-            IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
-            edit_dropdown.Click();
-            IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
-            IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
-            string f = first_name_textbox.GetAttribute("value");
-            string l = last_name_textbox.GetAttribute("value");
-            string para_first = first_name;
-            string para_last = last_name;
-            if (f == para_first && l == para_last)
+            IWebElement EditDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
+            EditDropdown.Click();
+            IWebElement FirstNameTextbox = driver.FindElement(By.Name("FirstName"));
+            IWebElement LastNameTextbox = driver.FindElement(By.Name("LastName"));
+            string f = FirstNameTextbox.GetAttribute("value");
+            string l = LastNameTextbox.GetAttribute("value");
+            string ParaFirst = FirstName;
+            string ParaLast = LastName;
+            if (f == ParaFirst && l == ParaLast)
             {
 
-                Console.WriteLine("\n First and last name edited successfully.");
+                Console.WriteLine("\n First and Last name edited successfully.");
 
             }
             else
             {
-                Console.WriteLine("\n First and last name not matched with parameter passed from feature file.");
+                Console.WriteLine("\n First and Last name not matched with parameter passed from feature file.");
             }
             driver.Close();
         }
-        public void First_And_Last_Name_As_Blank(IWebDriver driver)
+        public void FirstAndLastNameAsBlank(IWebDriver driver)
         {
                 Thread.Sleep(1000);
-                IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
-                edit_dropdown.Click();
+                IWebElement EditDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
+                EditDropdown.Click();
                 Thread.Sleep(1000);
-                IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
-                IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
-                first_name_textbox.Click();
-                first_name_textbox.Clear();
+                IWebElement FirstNameTextbox = driver.FindElement(By.Name("FirstName"));
+                IWebElement LastNameTextbox = driver.FindElement(By.Name("LastName"));
+                FirstNameTextbox.Click();
+                FirstNameTextbox.Clear();
                 Thread.Sleep(500);
-                last_name_textbox.Click() ;
-                last_name_textbox.Clear();
+                LastNameTextbox.Click() ;
+                LastNameTextbox.Clear();
                 Thread.Sleep(500);
-                IWebElement save_button = driver.FindElement(By.XPath("//button[contains(text(),'Save')]"));
-                save_button.Click();
+                IWebElement SaveButton = driver.FindElement(By.XPath("//button[contains(text(),'Save')]"));
+                SaveButton.Click();
                 Thread.Sleep(1000);
         }
-        public void Error_Message_First_And_Last_Name_As_Blank(IWebDriver driver)
+        public void ErrorMessageFirstAndLastNameAsBlank(IWebDriver driver)
         {
             Thread.Sleep(1000);
-            IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
-            edit_dropdown.Click();
+            IWebElement EditDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
+            EditDropdown.Click();
             Thread.Sleep(1000);
-            IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
-            IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
-            string f = first_name_textbox.GetAttribute("value");
-            string l = last_name_textbox.GetAttribute("value");
+            IWebElement FirstNameTextbox = driver.FindElement(By.Name("FirstName"));
+            IWebElement LastNameTextbox = driver.FindElement(By.Name("LastName"));
+            string f = FirstNameTextbox.GetAttribute("value");
+            string l = LastNameTextbox.GetAttribute("value");
             if (string.IsNullOrWhiteSpace(f) && string.IsNullOrWhiteSpace(l))
             {
-                Console.WriteLine("\n First and last name are blank, User need to enter first and last name.");
+                Console.WriteLine("\n First and Last name are blank, User need to enter First and Last name.");
             }
             else
             {
-                Console.WriteLine("\n First and last name are not blank.");
+                Console.WriteLine("\n First and Last name are not blank.");
             }
             driver.Close();
         }
-        public void First_And_Last_Name_As_White_Space(IWebDriver driver, string first, string last)
+        public void FirstAndLastNameAsWhiteSpace(IWebDriver driver, string First, string Last)
         {
-            IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
-            edit_dropdown.Click();
+            IWebElement EditDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
+            EditDropdown.Click();
             Thread.Sleep(1000);
-            IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
-            first_name_textbox.Click();
-            first_name_textbox.Clear();
-            first_name_textbox.SendKeys(first);
+            IWebElement FirstNameTextbox = driver.FindElement(By.Name("FirstName"));
+            FirstNameTextbox.Click();
+            FirstNameTextbox.Clear();
+            FirstNameTextbox.SendKeys(First);
             Thread.Sleep(1000);
-            IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
-            last_name_textbox.Click();
-            last_name_textbox.Clear();
-            last_name_textbox.SendKeys(last);
+            IWebElement LastNameTextbox = driver.FindElement(By.Name("LastName"));
+            LastNameTextbox.Click();
+            LastNameTextbox.Clear();
+            LastNameTextbox.SendKeys(Last);
             Thread.Sleep(1000);
-            IWebElement save_button = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div[2]/button"));
-            save_button.Click();
+            IWebElement SaveButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[2]/div/div[2]/button"));
+            SaveButton.Click();
             Thread.Sleep(1000);
         }
-        public void Error_Message_First_And_Last_Name_As_White_Space(IWebDriver driver, string first, string last)
+        public void ErrorMessageFirstAndLastNameAsWhiteSpace(IWebDriver driver, string First, string Last)
         {
-            IWebElement edit_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
-            edit_dropdown.Click();
+            IWebElement EditDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[2]/div/div/div[1]/i"));
+            EditDropdown.Click();
             Thread.Sleep(1000);
-            IWebElement first_name_textbox = driver.FindElement(By.Name("firstName"));
-            IWebElement last_name_textbox = driver.FindElement(By.Name("lastName"));
-            string f = first_name_textbox.GetAttribute("value");
-            string l = last_name_textbox.GetAttribute("value");
-            string para_first = first;
-            string para_last = last;
-            if (f == para_first && l == para_last)
+            IWebElement FirstNameTextbox = driver.FindElement(By.Name("FirstName"));
+            IWebElement LastNameTextbox = driver.FindElement(By.Name("LastName"));
+            string f = FirstNameTextbox.GetAttribute("value");
+            string l = LastNameTextbox.GetAttribute("value");
+            string ParaFirst = First;
+            string ParaLast = Last;
+            if (f == ParaFirst && l == ParaLast)
             {
 
-                Console.WriteLine("\n First and last name has no value.");
+                Console.WriteLine("\n First and Last name has no value.");
 
             }
             else
             {
-                Console.WriteLine("\n First and last name has value");
+                Console.WriteLine("\n First and Last name has value");
             }
             Thread.Sleep(1000);
             driver.Close();
         }
-        public void Click_Edit_Icon_Of_Availability(IWebDriver driver)
+        public void ClickEditIconOfAvailability(IWebDriver driver)
         {
-            IWebElement edit_icon_availability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i"));
-            edit_icon_availability.Click();
+            IWebElement EditIconAvailability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i"));
+            EditIconAvailability.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Edit_Icon_Of_Availability(IWebDriver driver)
+        public void ClickedEditIconOfAvailability(IWebDriver driver)
         {
             Console.WriteLine("\nUser clicked on edit icon of availability.");
             driver.Close();
         }
-        public void Click_Cross_Icon_Of_Availability(IWebDriver driver)
+        public void ClickCrossIconOfAvailability(IWebDriver driver)
         {
-            IWebElement cross_icon_availability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i"));
-            cross_icon_availability.Click();
+            IWebElement CrossIconAvailability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i"));
+            CrossIconAvailability.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Cross_Icon_Of_Availability(IWebDriver driver)
+        public void ClickedCrossIconOfAvailability(IWebDriver driver)
         {
             Console.WriteLine("\nUser clicked on cross icon of availability.");
             driver.Close();
         }
-        public void Change_Value_Of_Availability(IWebDriver driver)
+        public void ChangeValueOfAvailability(IWebDriver driver)
         {
-            IWebElement edit_icon_availability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i"));
-            edit_icon_availability.Click();
+            IWebElement EditIconAvailability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/i"));
+            EditIconAvailability.Click();
             Thread.Sleep(1000);
-            IWebElement availability_dropdown = driver.FindElement(By.Name("availabiltyType"));
-            availability_dropdown.Click();
+            IWebElement AvailabilityDropdown = driver.FindElement(By.Name("availabiltyType"));
+            AvailabilityDropdown.Click();
             Thread.Sleep(1000);
-            IWebElement select_availability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/select/option[3]"));
-            select_availability.Click();
+            IWebElement SelectAvailability = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[2]/div/span/select/option[3]"));
+            SelectAvailability.Click();
             Thread.Sleep(1000);
         }
-        public void Changed_Value_Of_Availability(IWebDriver driver)
+        public void ChangedValueOfAvailability(IWebDriver driver)
         {
             Console.WriteLine("\n Availability valued changed.");
             driver.Close();
         }
-        public void Click_Edit_Icon_Of_Hours(IWebDriver driver)
+        public void ClickEditIconOfHours(IWebDriver driver)
         {
-            IWebElement edit_icon_hours = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i"));
-            edit_icon_hours.Click();
+            IWebElement EditIconHours = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i"));
+            EditIconHours.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Edit_Icon_Of_Hours(IWebDriver driver)
+        public void ClickedEditIconOfHours(IWebDriver driver)
         {
             Console.WriteLine("\nUser clicked on edit icon of hours.");
             driver.Close();
         }
-        public void Click_Cross_Icon_Of_Hours(IWebDriver driver)
+        public void ClickCrossIconOfHours(IWebDriver driver)
         {
             Thread.Sleep(1000);
-            IWebElement cross_icon_hours = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i"));
-            cross_icon_hours.Click();
+            IWebElement CrossIconHours = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i"));
+            CrossIconHours.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Cross_Icon_Of_Hours(IWebDriver driver)
+        public void ClickedCrossIconOfHours(IWebDriver driver)
         {
             Console.WriteLine("\nUser clicked on cross icon of hours.");
             driver.Close();
         }
-        public void Change_Value_Of_Hours(IWebDriver driver)
+        public void ChangeValueOfHours(IWebDriver driver)
         {
-            IWebElement edit_icon_hours = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i"));
-            edit_icon_hours.Click();
+            IWebElement EditIconHours = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/i"));
+            EditIconHours.Click();
             Thread.Sleep(1000);
-            IWebElement hours_dropdown = driver.FindElement(By.Name("availabiltyHour"));
-            hours_dropdown.Click();
+            IWebElement HoursDropdown = driver.FindElement(By.Name("availabiltyHour"));
+            HoursDropdown.Click();
             Thread.Sleep(1000);
-            IWebElement select_hours = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/select/option[4]"));
-            select_hours.Click();
+            IWebElement SelectHours = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[3]/div/span/select/option[4]"));
+            SelectHours.Click();
             Thread.Sleep(1000);
         }
-        public void Changed_Value_Of_Hours(IWebDriver driver)
+        public void ChangedValueOfHours(IWebDriver driver)
         {
             Console.WriteLine("\n Hours valued changed.");
             driver.Close();
         }
-        public void Click_Edit_Icon_Of_Earn_Target(IWebDriver driver)
+        public void ClickEditIconOfEarnTarget(IWebDriver driver)
         {
-            IWebElement edit_icon_earn_target = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i"));
-            edit_icon_earn_target.Click();
+            IWebElement EditIconEarnTarget = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i"));
+            EditIconEarnTarget.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Edit_Icon_Of_Earn_Target(IWebDriver driver)
+        public void ClickedEditIconOfEarnTarget(IWebDriver driver)
         {
-            Console.WriteLine("\nUser clicked on edit icon of earn_target.");
+            Console.WriteLine("\nUser clicked on edit icon of earntarget.");
             driver.Close();
         }
-        public void Click_Cross_Icon_Of_Earn_Target(IWebDriver driver)
+        public void ClickCrossIconOfEarnTarget(IWebDriver driver)
         {
             Thread.Sleep(1000);
-            IWebElement cross_icon_earn_target = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i"));
-            cross_icon_earn_target.Click();
+            IWebElement CrossIconEarnTarget = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i"));
+            CrossIconEarnTarget.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Cross_Icon_Of_Earn_Target(IWebDriver driver)
+        public void ClickedCrossIconOfEarnTarget(IWebDriver driver)
         {
             Console.WriteLine("\nUser clicked on cross icon of earn target.");
             driver.Close();
         }
-        public void Change_Value_Of_Earn_Target(IWebDriver driver)
+        public void ChangeValueOfEarnTarget(IWebDriver driver)
         {
-            IWebElement edit_icon_earn_target = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i"));
-            edit_icon_earn_target.Click();
+            IWebElement EditIconEarnTarget = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/i"));
+            EditIconEarnTarget.Click();
             Thread.Sleep(1000);
-            IWebElement earn_target_dropdown = driver.FindElement(By.Name("availabiltyTarget"));
-            earn_target_dropdown.Click();
+            IWebElement EarnTargetDropdown = driver.FindElement(By.Name("availabiltyTarget"));
+            EarnTargetDropdown.Click();
             Thread.Sleep(500);
-            IWebElement select_earn_target = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/select/option[4]"));
-            select_earn_target.Click();
+            IWebElement SelectEarnTarget = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[2]/div/div/div/div/div/div[3]/div/div[4]/div/span/select/option[4]"));
+            SelectEarnTarget.Click();
             Thread.Sleep(1000);
         }
-        public void Changed_Value_Of_Earn_Target(IWebDriver driver)
+        public void ChangedValueOfEarnTarget(IWebDriver driver)
         {
-            Console.WriteLine("\n Earn_target valued changed.");
+            Console.WriteLine("\n Earntarget valued changed.");
             driver.Close();
         }
     }

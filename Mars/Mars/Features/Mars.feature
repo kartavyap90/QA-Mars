@@ -7,12 +7,12 @@
 #	When New User can navigate and click on the Join button
 #	Then The registration window should open
 #
-#For below scenario each time change the email address
+#For below scenario each time change the email Address
 #Scenario: aNew User can able to enter the required details in registration page.
 #	Given Navigate to into Mars portal
 #	When Click on the Join button
-#	And Enter the registration details 'first' 'last' 'abc123444444@gmail.com' 'abc12345' 'abc12345'
-#	And Chcked the checkbox and click submit button
+#	And Enter the registration details 'First' 'Last' 'abc12344444455@gmail.com' 'abc123455' 'abc123455'
+#	And Chcked the Checkbox and click submit button
 #	Then User details should registered
 
 #Scenario: Existing User can able to click on Sign In button.
@@ -23,15 +23,15 @@
 #Scenario: Existing User can able to click on Sign In button and login into portal.
 #	Given Navigate to Mars portal
 #	When Click on Sign In button
-#	And Enter Email address and Password 'kartavyap90@gmail.com' 'abc123'
-#	Then User should navigate to dashboard
+#	And Enter Email Address and Password 'kartavyap90@gmail.com' 'abc123'
+#	Then User should navigate to Dashboard
 #
-#For below scenario each time change the email address
+#For below scenario each time change the email Address
 #Scenario: Existing User can able to click on Join button and register details from the login box.
 #	Given Open portal
 #	When User click on Sign In button.
 #	And User click on Join button.
-#	And User enter registration details 'first name' 'last name' 'a111111111111@a.com' 'abc12345' 'abc12345'
+#	And User enter registration details 'First name' 'Last name' 'a1111111111111@a.com' 'abc123456' 'abc123456'
 #	Then User's deatils should registered
 #
 #For below scenario try to use email id as above scenario
@@ -49,14 +49,14 @@
 #	Then User should not login 'kartavyap9@gmail.com'
 
 
-# Languages Tab scenario
-#Scenario: bExisiting User can add the Languges and Level from the language section in Profile page.
+ #Languages Tab scenario
+#Scenario: bExisiting User can Add the Languges and Level from the language section in Profile page.
 #	Given Opening Mars portal
 #	When User login into portal 'kartavyap90@gmail.com' 'abc123'
 #	And User click on AddNew button and enter details 'language3'
 #	Then User's detail should registered 'language3'
 #
-#Scenario: Exisiting User can not add the Languges and Level without entering each of them from the language section in Profile page.
+#Scenario: Exisiting User can not Add the Languges and Level without entering each of them from the language section in Profile page.
 #	Given Opening to Mars portal
 #	When Login into Portal 'kartavyap90@gmail.com' 'abc123'
 #	And User click on AddNew button withoust entering details
@@ -68,7 +68,7 @@
 #	And Edit the language and level 'edited language'
 #	Then User should successfully edited language and level 
 #
-#For below scenario first check that you have language added
+##For below scenario First check that you have language Added
 #Scenario: Existing User can delete the Language and Level.
 #	Given User open mars portal
 #	When User Login to portal 'kartavyap90@gmail.com' 'abc123'
@@ -77,58 +77,58 @@
 
 
 # Skills Tab scenario
-#Scenario: Exisiting User can add the Skills and Level from the skills section.
+#Scenario: Exisiting User can Add the Skills and Level from the Skills section.
 #	Given User Opening Mars portal
 #	When User Login to mars portal 'kartavyap90@gmail.com' 'abc123'
-#	And User Click on AddNew button and enter skill 'skill 1'
-#	Then User details should registered 'skill 1'
+#	And User Click on AddNew button and enter Skill 'Skill 1'
+#	Then User details should registered 'Skill 1'
 #
-#Scenario: Exisiting User can not add the Skill and Level without entering each of them from the skill section.
+#Scenario: Exisiting User can not Add the Skill and Level without entering each of them from the Skill section.
 #	Given Opening to portal Mars
 #	When Login to Mars Portal 'kartavyap90@gmail.com' 'abc123'
-#	And User click on AddNew button without entering skill details
+#	And User click on AddNew button without entering Skill details
 #	Then User received error message for it
 #
 #Scenario: Existing User can edit the Skill and Level.
 #	Given open to portal mars
 #	When Login to Portal Mars 'kartavyap90@gmail.com' 'abc123'
-#	And Edit the skill and level 'edited skill'
-#	Then User should successfully edited skill and level
+#	And Edit the Skill and level 'edited Skill'
+#	Then User should successfully edited Skill and level
 #
 #Scenario: Existing User can delete the Skill and Level.
 #	Given User open to mars portal
 #	When User Login to portal mars 'kartavyap90@gmail.com' 'abc123'
-#	And User click on delete button to delete skill entry
-#	Then User should successfully deleted the skill
+#	And User click on delete button to delete Skill entry
+#	Then User should successfully deleted the Skill
 
 
 # User Profile scenarios
-#Scenario: Exisiting User can click on the dropdown button to edit the First name and last name.
+#Scenario: Exisiting User can click on the Dropdown button to edit the First name and Last name.
 #	Given Launch portal
 #	When User login to portal with details 'kartavyap90@gmail.com' 'abc123'
-#	And User can click on the edit dropdown
-#	Then User should successfully click on edit dropdown
+#	And User can click on the edit Dropdown
+#	Then User should successfully click on edit Dropdown
 #
-#Scenario: Check that Exisiting User can edit the First name and last name.
+#Scenario: Check that Exisiting User can edit the First name and Last name.
 #	Given User can Launch portal
 #	When User can login to portal with details 'kartavyap90@gmail.com' 'abc123'
-#	And User can edit the First name and last name 'ABC' 'DEF'
-#	Then User should successfully edit the First and last name 'ABC' 'DEF'
+#	And User can edit the First name and Last name 'ABC' 'DEF'
+#	Then User should successfully edit the First and Last name 'ABC' 'DEF'
 #
-#Scenario: Existing User can receive error message while hitting the Save button without entering the first and last name.
+#Scenario: Existing User can receive error message while hitting the Save button without entering the First and Last name.
 #	Given User can Launch the Mars portal
 #	When User can login into the Mars portal with details 'kartavyap90@gmail.com' 'abc123'
-#	And User enter the First name and last name as blank 
-#	Then User should receive error message for blank first and last name 
+#	And User enter the First name and Last name as blank 
+#	Then User should receive error message for blank First and Last name 
 #
-#Scenario: Existing User can enter the blank space in first and last name.
+#Scenario: Existing User can enter the blank space in First and Last name.
 #	Given User can Launch Mars portal
 #	When User can login to Mars portal with details 'kartavyap90@gmail.com' 'abc123'
-#	And User can enter the First name and last name as white space ' ' ' '
-#	Then User should receive error message for white space first and last name ' ' ' '
+#	And User can enter the First name and Last name as white space ' ' ' '
+#	Then User should receive error message for white space First and Last name ' ' ' '
 #
 #Scenario:	Existing User can click on the edit icon of the availability.
-#	Given User nav to mars portal
+#	Given Users nav to mars portal
 #	When User login into the portal 'kartavyap90@gmail.com' 'abc123'
 #	And User click on the edit icon of the availability
 #	Then User should successfully click on the edit icon
@@ -188,11 +188,11 @@
 #	And User click on the edit icon of the description
 #	Then User should successfully click on the edit icon of the description
 #
-#Scenario: Existing User can receive error while entering description without first character of digit or letter.
+#Scenario: Existing User can receive error while entering description without First character of digit or letter.
 #	Given Launch to the portal mars
 #	When Enter to the Mars Portal 'kartavyap90@gmail.com' 'abc123'
-#	And User can receive error while entering description without first character of digit or letter
-#	Then User should receive error while entering description without first character of digit or letter
+#	And User can receive error while entering description without First character of digit or letter
+#	Then User should receive error while entering description without First character of digit or letter
 #
 #Scenario: Existing User can enter the description.
 #	Given Launch to the portal mars
@@ -203,7 +203,7 @@
 # Education tab scenario
 #Scenario: Existing User can click on the Education tab.
 #	Given Launch the portal
-#	When User SignIn for the Mars Portal 'kartavyap90@gmail.com' 'abc123'
+#	When Users SignIn for the Mars Portal 'kartavyap90@gmail.com' 'abc123'
 #	And User can click on the Education tab
 #	Then User should successfully click on the Education tab
 #
@@ -213,10 +213,10 @@
 #	And User click on the Add New button from the Education tab
 #	Then User should successfully click on the Add New button from the Education tab
 #
-#Scenario: Existing User can not add the education and other details without entering each of them from the Education tab.
+#Scenario: Existing User can not Add the education and other details without entering each of them from the Education tab.
 #	Given Launch QA Mars Portal
 #	When User Login the Mars Portal 'kartavyap90@gmail.com' 'abc123'
-#	And User not add the educations and other details and click Add button
+#	And User not Add the educations and other details and click Add button
 #	Then User should successfully receive error
 #
 #Scenario: Existing User can click on the Cancel button from the Education tab.
@@ -225,16 +225,16 @@
 #	And User click Cancel button
 #	Then User should successfully click Cancel button
 #
-#Scenario: Existing User can add the educations and other details from the Education tab.
+#Scenario: Existing User can Add the educations and other details from the Education tab.
 #	Given Launch the QA Mars 
 #	When User Login into Mars Portal 'kartavyap90@gmail.com' 'abc123'
-#	And User enter education details and click add button 'Royal College' 'CS' 
+#	And User enter education details and click Add button 'Royal College' 'CS' 
 #	Then User should successfully enter education details 
 #
 #Scenario: Existing User can edit the educations and other details from the Education tab.
 #	Given Launch QA Mars 
 #	When Login into Mars Portal 'kartavyap90@gmail.com' 'abc123'
-#	And User edit education details and click add button 'Saint University' 'MBBS' 
+#	And User edit education details and click Add button 'Saint University' 'MBBS' 
 #	Then User should successfully edited education details 
 #
 #Scenario: Existing User can delete the educations and other details from the Education tab.
@@ -247,7 +247,7 @@
 # Certification tab scenario
 #Scenario: Existing User can click on the Certification tab.
 #	Given Launch Portal qa mars 
-#	When User SignIn the Mars Portal 'kartavyap90@gmail.com' 'abc123'
+#	When Users SignIn the Mars Portal 'kartavyap90@gmail.com' 'abc123'
 #	And User can click on the Certification  tab
 #	Then User should successfully click on the Certification  tab
 #
@@ -257,10 +257,10 @@
 #	And User click on the Add New button from the Certification tab
 #	Then User should successfully click on the Add New button from the Certification tab
 #
-#Scenario: Existing User can not add the certification and other details without entering each of them from the Certification tab.
+#Scenario: Existing User can not Add the certification and other details without entering each of them from the Certification tab.
 #	Given Launch QA Mars URL
 #	When User Login into the Mars Portal website 'kartavyap90@gmail.com' 'abc123'
-#	And User not add the certification and other details and click Add button
+#	And User not Add the certification and other details and click Add button
 #	Then User should successfully receive error for it
 #
 #Scenario: Existing User can click on the Cancel button from the Certification tab.
@@ -269,16 +269,16 @@
 #	And User click Cancel button in Certification tab
 #	Then User should successfully click Cancel button in Certification tab
 #
-#Scenario: Existing User can add the certification and other details from the Certification tab.
+#Scenario: Existing User can Add the certification and other details from the Certification tab.
 #	Given Launch Mars 
 #	When Existing User Login into Mars Portal 'kartavyap90@gmail.com' 'abc123'
-#	And User enter certification details and click add button 'Certificate 1' 'MVP Studio' 
+#	And User enter certification details and click Add button 'Certificate 1' 'MVP Studio' 
 #	Then User should successfully enter certification details
 #
 #Scenario: Existing User can edit the certification and other details from the Certification tab.
 #	Given Launch QA Mars website
 #	When Login into Mars Portal website 'kartavyap90@gmail.com' 'abc123'
-#	And User edit certification details and click add button 'Certificate 2' 'Industry Connect' 
+#	And User edit certification details and click Add button 'Certificate 2' 'Industry Connect' 
 #	Then User should successfully edited certification details 
 #
 #Scenario: Existing User can delete the certification and other details from the Certification tab.

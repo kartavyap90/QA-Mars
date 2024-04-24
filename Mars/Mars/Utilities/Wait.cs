@@ -9,7 +9,7 @@ namespace Mars.Utilities
 {
     public class Wait
     {
-        public static void Wait_To_Be_Clickable()
+        public static void WaitToBeClickable()
         {
             //var wait = new WebDriver();
         }

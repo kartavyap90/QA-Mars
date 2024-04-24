@@ -7,154 +7,154 @@ using System.Threading.Tasks;
 
 namespace Mars.Pages
 {
-    public class Education_Tab_Page
+    public class EducationTabPage
     {
-        public void Click_Education_Tab(IWebDriver driver)
+        public void ClickEducationTab(IWebDriver driver)
         {
-            IWebElement click_education_tab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
-            click_education_tab.Click();
+            IWebElement ClickEducationTab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
+            ClickEducationTab.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Education_Tab(IWebDriver driver)
+        public void ClickedEducationTab(IWebDriver driver)
         {
             Console.WriteLine("\n User successfully clicked on education tab.");
             driver.Close();
         }
-        public void Click_Add_New_Button_Education(IWebDriver driver)
+        public void ClickAddNewButtonEducation(IWebDriver driver)
         {
-            IWebElement education_tab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
-            education_tab.Click();
+            IWebElement EducationTab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[3]"));
+            EducationTab.Click();
             Thread.Sleep(1000);
-            IWebElement add_new_button_education = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/thead/tr/th[6]/div"));
-            add_new_button_education.Click();
+            IWebElement AddNewButtonEducation = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/thead/tr/th[6]/div"));
+            AddNewButtonEducation.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Add_New_Button_Education(IWebDriver driver)
+        public void ClickedAddNewButtonEducation(IWebDriver driver)
         {
             Console.WriteLine("\n User successfully clicked Add New button in education tab.");
             driver.Close();
         }
-        public void Click_Add_Button_Without_Education_Details(IWebDriver driver)
+        public void ClickAddButtonWithoutEducationDetails(IWebDriver driver)
         {
-            IWebElement add_button = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[3]/div/input[1]"));
-            add_button.Click();
+            IWebElement AddButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[3]/div/input[1]"));
+            AddButton.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Add_Button_Without_Education_Details(IWebDriver driver)
+        public void ClickedAddButtonWithoutEducationDetails(IWebDriver driver)
         {
             Console.WriteLine("\n User successfully clicked Add button without education details and received an error.");
             driver.Close();
         }
-        public void Click_Cancel_Button_Education(IWebDriver driver)
+        public void ClickCancelButtonEducation(IWebDriver driver)
         {
-            IWebElement cancel_button_education = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[3]/div/input[2]"));
-            cancel_button_education.Click();
+            IWebElement CancelButtonEducation = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[3]/div/input[2]"));
+            CancelButtonEducation.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Cancel_Button_Education(IWebDriver driver)
+        public void ClickedCancelButtonEducation(IWebDriver driver)
         {
             Console.WriteLine("\n User successfully clicked Cancel button in education tab.");
             driver.Close();
         }
-        public void Enter_Education_Details(IWebDriver driver, string college_university_name, string degree_name)
+        public void EnterEducationDetails(IWebDriver driver, string collegeuniversityname, string degreename)
         {
-            IWebElement college_university_textbox = driver.FindElement(By.Name("instituteName"));
-            college_university_textbox.Click();
-            college_university_textbox.Clear();
-            college_university_textbox.SendKeys(college_university_name);
+            IWebElement CollegeUniversityTextbox = driver.FindElement(By.Name("instituteName"));
+            CollegeUniversityTextbox.Click();
+            CollegeUniversityTextbox.Clear();
+            CollegeUniversityTextbox.SendKeys(collegeuniversityname);
             Thread.Sleep(1000);
 
-            IWebElement country_college_university_dropdown = driver.FindElement(By.Name("country"));
-            country_college_university_dropdown.Click();
-            IWebElement select_country_college_university_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[1]/div[2]/select/option[102]"));
-            select_country_college_university_dropdown.Click();
+            IWebElement CountryCollegeUniversityDropdown = driver.FindElement(By.Name("country"));
+            CountryCollegeUniversityDropdown.Click();
+            IWebElement SelectCountryCollegeUniversityDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[1]/div[2]/select/option[102]"));
+            SelectCountryCollegeUniversityDropdown.Click();
             Thread.Sleep(1000);
 
-            IWebElement title_dropdown = driver.FindElement(By.Name("title"));
-            title_dropdown.Click();
-            IWebElement select_title_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[2]/div[1]/select/option[11]"));
-            select_title_dropdown.Click();
+            IWebElement TitleDropdown = driver.FindElement(By.Name("title"));
+            TitleDropdown.Click();
+            IWebElement SelectTitleDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[2]/div[1]/select/option[11]"));
+            SelectTitleDropdown.Click();
             Thread.Sleep(1000);
 
-            IWebElement degree_textbox = driver.FindElement(By.Name("degree"));
-            degree_textbox.Click();
-            degree_textbox.Clear();
-            degree_textbox.SendKeys(degree_name);
+            IWebElement DegreeTextbox = driver.FindElement(By.Name("degree"));
+            DegreeTextbox.Click();
+            DegreeTextbox.Clear();
+            DegreeTextbox.SendKeys(degreename);
             Thread.Sleep(1000);
 
-            IWebElement graduation_dropdown = driver.FindElement(By.Name("yearOfGraduation"));
-            graduation_dropdown.Click();
-            IWebElement select_graduation_dropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[2]/div[3]/select/option[2]"));
-            select_graduation_dropdown.Click();
+            IWebElement GraduationDropdown = driver.FindElement(By.Name("yearOfGraduation"));
+            GraduationDropdown.Click();
+            IWebElement SelectGraduationDropdown = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[2]/div[3]/select/option[2]"));
+            SelectGraduationDropdown.Click();
             Thread.Sleep(1000);
 
-            IWebElement add_button = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[3]/div/input[1]"));
-            add_button.Click();
+            IWebElement AddButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/div/div[3]/div/input[1]"));
+            AddButton.Click();
             Thread.Sleep(1000);
         }
-        public void Entered_Education_Details(IWebDriver driver)
+        public void EnteredEducationDetails(IWebDriver driver)
         {
             Console.WriteLine("\n Education Details successfully entered by the user.");
             driver.Close();
         }
-        public void Edit_Education_Details(IWebDriver driver, string college_university_name, string degree_name)
+        public void EditEducationDetails(IWebDriver driver, string collegeuniversityname, string degreename)
         {
             Thread.Sleep(1000);
-            IWebElement edit_icon_education = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[6]/span[1]/i"));
-            edit_icon_education.Click();
+            IWebElement EditiconEducation = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[Last()]/tr/td[6]/span[1]/i"));
+            EditiconEducation.Click();
             Thread.Sleep(1000);
 
 
 
 
-            IWebElement college_university_textbox = driver.FindElement(By.XPath("//input[@name='instituteName']"));
-            college_university_textbox.Click();
-            college_university_textbox.Clear();
-            college_university_textbox.SendKeys(college_university_name);
+            IWebElement CollegeUniversityTextbox = driver.FindElement(By.XPath("//input[@name='instituteName']"));
+            CollegeUniversityTextbox.Click();
+            CollegeUniversityTextbox.Clear();
+            CollegeUniversityTextbox.SendKeys(collegeuniversityname);
             Thread.Sleep(1000);
 
-            IWebElement country_college_university_dropdown = driver.FindElement(By.XPath("//select[@name='country']"));
-            country_college_university_dropdown.Click();
+            IWebElement CountryCollegeUniversityDropdown = driver.FindElement(By.XPath("//select[@name='country']"));
+            CountryCollegeUniversityDropdown.Click();
             Thread.Sleep(1000);
-            IWebElement select_country_college_university_dropdown = driver.FindElement(By.XPath("//option[contains(text(),'Australia')]"));
-            select_country_college_university_dropdown.Click();
-            Thread.Sleep(1000);
-
-            IWebElement title_dropdown = driver.FindElement(By.XPath("//select[@name='title']"));
-            title_dropdown.Click();
-            Thread.Sleep(1000);
-            IWebElement select_title_dropdown = driver.FindElement(By.XPath("//option[contains(text(),'BFA')]"));
-            select_title_dropdown.Click();
+            IWebElement SelectCountryCollegeUniversityDropdown = driver.FindElement(By.XPath("//option[contains(text(),'Australia')]"));
+            SelectCountryCollegeUniversityDropdown.Click();
             Thread.Sleep(1000);
 
-            IWebElement degree_textbox = driver.FindElement(By.Name("degree"));
-            degree_textbox.Click();
-            degree_textbox.Clear();
-            degree_textbox.SendKeys(degree_name);
+            IWebElement TitleDropdown = driver.FindElement(By.XPath("//select[@name='title']"));
+            TitleDropdown.Click();
+            Thread.Sleep(1000);
+            IWebElement SelectTitleDropdown = driver.FindElement(By.XPath("//option[contains(text(),'BFA')]"));
+            SelectTitleDropdown.Click();
             Thread.Sleep(1000);
 
-            IWebElement graduation_dropdown = driver.FindElement(By.Name("yearOfGraduation"));
-            graduation_dropdown.Click();
-            IWebElement select_graduation_dropdown = driver.FindElement(By.XPath("//option[contains(text(),'2020')]"));
-            select_graduation_dropdown.Click();
+            IWebElement DegreeTextbox = driver.FindElement(By.Name("degree"));
+            DegreeTextbox.Click();
+            DegreeTextbox.Clear();
+            DegreeTextbox.SendKeys(degreename);
             Thread.Sleep(1000);
 
-            IWebElement add_button = driver.FindElement(By.XPath("//input[@value='Update']")); //relative xpath
-            add_button.Click();
+            IWebElement GraduationDropdown = driver.FindElement(By.Name("yearOfGraduation"));
+            GraduationDropdown.Click();
+            IWebElement SelectGraduationDropdown = driver.FindElement(By.XPath("//option[contains(text(),'2020')]"));
+            SelectGraduationDropdown.Click();
+            Thread.Sleep(1000);
+
+            IWebElement AddButton = driver.FindElement(By.XPath("//input[@value='Update']")); //relative xpath
+            AddButton.Click();
             Thread.Sleep(2000);
         }
-        public void Edited_Education_Details(IWebDriver driver)
+        public void EditedEducationDetails(IWebDriver driver)
         {
             Console.WriteLine("\n Education Details successfully edited by the user.");
             driver.Close();
         }
-        public void Click_Cross_Icon_Education(IWebDriver driver)
+        public void ClickCrossIconEducation(IWebDriver driver)
         {
-            IWebElement cross_icon_education = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[last()]/tr/td[6]/span[2]/i"));
-            cross_icon_education.Click();
+            IWebElement CrossIconEducation = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[4]/div/div[2]/div/table/tbody[Last()]/tr/td[6]/span[2]/i"));
+            CrossIconEducation.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Cross_Icon_Education(IWebDriver driver)
+        public void ClickedCrossIconEducation(IWebDriver driver)
         {
             Console.WriteLine("\n Education Details successfully deleted by the user.");
             driver.Close();

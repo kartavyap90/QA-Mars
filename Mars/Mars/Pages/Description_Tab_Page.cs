@@ -7,51 +7,51 @@ using System.Threading.Tasks;
 
 namespace Mars.Pages
 {
-    public class Description_Tab_Page
+    public class DescriptionTabPage
     {
-        public void Click_Edit_Icon_Of_Description(IWebDriver driver)
+        public void ClickEditIconOfDescription(IWebDriver driver)
         {
             Thread.Sleep(1000);
-            IWebElement pencil_icon_description = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/div/h3/span/i"));
-            pencil_icon_description.Click();
+            IWebElement pencilicondescription = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/div/h3/span/i"));
+            pencilicondescription.Click();
             Thread.Sleep(1000);
         }
-        public void Clicked_Edit_Icon_Of_Description(IWebDriver driver)
+        public void ClickedEditIconOfDescription(IWebDriver driver)
         {
             Console.WriteLine("\n Edit icon clicked by user.");
             driver.Close();
         }
-        public void Error_Entering_Description_Without_Digit_Or_Letter(IWebDriver driver)
+        public void ErrorEnteringDescriptionWithoutDigitOrLetter(IWebDriver driver)
         {
-            IWebElement description_value = driver.FindElement(By.Name("value"));
-            description_value.Click();
-            description_value.Clear();
-            description_value.SendKeys(" Entering description with first character as white space..");
+            IWebElement descriptionvalue = driver.FindElement(By.Name("value"));
+            descriptionvalue.Click();
+            descriptionvalue.Clear();
+            descriptionvalue.SendKeys(" Entering description with First character as white space..");
             Thread.Sleep(1000);
-            IWebElement save_button_description = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button"));
-            save_button_description.Click();
+            IWebElement SaveButtondescription = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button"));
+            SaveButtondescription.Click();
             Thread.Sleep(2000);
         }
-        public void Received_Error_Entering_Description_Without_Digit_Or_Letter(IWebDriver driver)
+        public void ReceivedErrorEnteringDescriptionWithoutDigitOrLetter(IWebDriver driver)
         {
-            Console.WriteLine("\n User received error while without entering first character as letter or digit in description box.");
+            Console.WriteLine("\n User received error while without entering First character as letter or digit in description box.");
             driver.Close();
         }
-        public void Enter_Description(IWebDriver driver)
+        public void EnterDescription(IWebDriver driver)
         {
-            IWebElement description_value = driver.FindElement(By.Name("value"));
-            description_value.Click();
-            description_value.Clear();
+            IWebElement descriptionvalue = driver.FindElement(By.Name("value"));
+            descriptionvalue.Click();
+            descriptionvalue.Clear();
             Thread.Sleep(1000);
-            description_value.SendKeys("This is a sample description.");
+            descriptionvalue.SendKeys("This is a sample description.");
             Thread.Sleep(1000);
-            IWebElement save_button_description = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button"));
-            save_button_description.Click();
+            IWebElement SaveButtondescription = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/div/div/form/div/div/div[2]/button"));
+            SaveButtondescription.Click();
             Thread.Sleep(1000);
         }
-        public void Entered_Description(IWebDriver driver)
+        public void EnteredDescription(IWebDriver driver)
         {
-            Console.WriteLine("\n Description added successfully by the user.");
+            Console.WriteLine("\n Description Added successfully by the user.");
             driver.Close();
         }
     }
