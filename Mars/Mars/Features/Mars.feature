@@ -13,7 +13,7 @@
 #	When Click on the Join button
 #	And Enter the registration details 'First' 'Last' 'abc12344444455@gmail.com' 'abc123455' 'abc123455'
 #	And Chcked the Checkbox and click submit button
-#	Then User details should registered
+#	Then User details should registered 
 
 #Scenario: Existing User can able to click on Sign In button.
 #	Given Open mars portal
